@@ -60,14 +60,6 @@ This project presents a comprehensive analysis of Germany's electric vehicle mar
 
 ### Main Tables
 ```sql
--- Electric Vehicle Sales Data
-CREATE TABLE ev_sales_germany (
-    year INTEGER,
-    vehicle_type VARCHAR(20), 
-    sales_units INTEGER,
-    market_share DECIMAL(5,2)
-);
-
 -- Charging Infrastructure Data  
 CREATE TABLE evcharging_germany (
     id_device INTEGER,
@@ -85,6 +77,8 @@ CREATE TABLE evcharging_germany (
 );
 ```
 
+![SQL table creation](https://github.com/user-attachments/assets/fb8bd6af-37a1-45d7-874d-b5bbb2e005ac)
+
 ---
 
 ## 📈 Key SQL Analyses
@@ -97,12 +91,16 @@ GROUP BY states, type_device
 ORDER BY states;
 ```
 
+![SQL fast charger more 100kw per states](https://github.com/user-attachments/assets/1b10b616-8cbc-44aa-8a81-4eaccbcf7677)
+
 ### 2. Total EV Infrastructure Count
 ```sql
 SELECT COUNT(*) FROM evcharging_germany
 WHERE type_device = 'Fast charger';
 -- Result: 14,807 fast chargers
 ```
+
+![SQL numbers of fast charger](https://github.com/user-attachments/assets/061ccb48-2bc1-4eef-a048-a3d871ab18df)
 
 ### 3. Regional Infrastructure Analysis
 ```sql
@@ -111,6 +109,9 @@ WHERE type_device='Standard charger'
 GROUP BY states, type_device
 ORDER BY states;
 ```
+
+![SQL standard charger per states](https://github.com/user-attachments/assets/755af443-89cd-4919-b629-f9fa4a85452a)
+
 ---
 
 ## 📊 Visualizations & Insights
@@ -121,6 +122,9 @@ ORDER BY states;
 - **Market Composition**: BEV vs PHEV market share evolution
 - **Infrastructure Density**: Fast vs Standard charger distribution
 - **Growth Correlation**: Sales vs Infrastructure development
+
+![power BI phev and bev germany](https://github.com/user-attachments/assets/59efec21-fd29-451c-a7b1-c8651ffa9cd4)
+
 
 ### Key Performance Indicators (KPIs)
 - Total EV Sales: 3.2M+ vehicles (2011-2023)
