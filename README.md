@@ -160,3 +160,10 @@ ORDER BY states;
 - German Federal Government for transparent data accessibility
 
 ---
+
+## Dataset used
+<a href="https://github.com/Robleh-hub/EV-Analysis-Germany/blob/main/EV%20Charging%20Germany.xlsx">EV Charging Germany<a/>
+
+<a href="https://github.com/Robleh-hub/EV-Analysis-Germany/blob/main/PHEV%20%26%20BEV%20Germany.xlsx">PHEV & BEV Germany<a/>
+
+---
