@@ -41,38 +41,6 @@ This project presents a comprehensive analysis of Germany's electric vehicle mar
 
 ---
 
-## 📁 Project Structure
-
-```
-ev-germany-analysis/
-│
-├── data/
-│   ├── raw/                    # Original datasets
-│   ├── processed/              # Cleaned and transformed data
-│   └── exports/               # Final analysis outputs
-│
-├── sql/
-│   ├── create_tables.sql      # Database schema creation
-│   ├── data_analysis.sql      # Core analysis queries
-│   └── aggregations.sql       # Summary statistics
-│
-├── powerbi/
-│   ├── EV_Germany_Dashboard.pbix
-│   └── visualizations/        # Exported charts and graphs
-│
-├── reports/
-│   ├── full_analysis_report.pdf
-│   └── executive_summary.md
-│
-├── images/
-│   ├── charts/               # Generated visualizations
-│   └── screenshots/          # Tool screenshots
-│
-└── README.md
-```
-
----
-
 ## 🔍 Data Sources
 
 ### Primary Sources
@@ -95,7 +63,7 @@ ev-germany-analysis/
 -- Electric Vehicle Sales Data
 CREATE TABLE ev_sales_germany (
     year INTEGER,
-    vehicle_type VARCHAR(20),  -- 'BEV' or 'PHEV'
+    vehicle_type VARCHAR(20), 
     sales_units INTEGER,
     market_share DECIMAL(5,2)
 );
@@ -104,7 +72,7 @@ CREATE TABLE ev_sales_germany (
 CREATE TABLE evcharging_germany (
     id_device INTEGER,
     company_name VARCHAR(115),
-    type_device VARCHAR(20),    -- 'Fast charger' or 'Standard charger'
+    type_device VARCHAR(20),    
     number_charger INTEGER,
     power_device_kw NUMERIC,
     plug_types VARCHAR(15),
@@ -143,7 +111,7 @@ WHERE type_device='Standard charger'
 GROUP BY states, type_device
 ORDER BY states;
 ```
-
+---
 
 ## 📊 Visualizations & Insights
 
@@ -159,19 +127,6 @@ ORDER BY states;
 - Infrastructure Coverage: 65,249 charging points
 - Fast Charging Ratio: 23% of total infrastructure
 - Peak Sales Year: 2022 (830,000+ units)
-
----
-
-
-3. **Run Analysis**
-```sql
-\i sql/data_analysis.sql
-```
-
-4. **Power BI Setup**
-- Connect to PostgreSQL database
-- Import `EV_Germany_Dashboard.pbix`
-- Refresh data connections
 
 ---
 
@@ -194,21 +149,10 @@ ORDER BY states;
 
 ---
 
-
 ## 🙏 Acknowledgments
 
 - **International Energy Agency (IEA)** for comprehensive EV market data
 - **Bundesnetzagentur** for detailed charging infrastructure datasets
 - German Federal Government for transparent data accessibility
-- Open source community for PostgreSQL and visualization tools
-
----
-
-## 📊 Project Stats
-
-![GitHub repo size](https://img.shields.io/github/repo-size/yourusername/ev-germany-analysis)
-![GitHub last commit](https://img.shields.io/github/last-commit/yourusername/ev-germany-analysis)
-![GitHub issues](https://img.shields.io/github/issues/yourusername/ev-germany-analysis)
-![GitHub stars](https://img.shields.io/github/stars/yourusername/ev-germany-analysis)
 
 ---
